@@ -2,15 +2,17 @@
 
 int 		main(int argc, char **argv)
 {
-	std::string inp;
+	std::string input;
 	Phonebook	book;
-	while (1)
-	{
-		std::cout << "Phonebook" << std::endl;
-		std::cin >> inp;
-		if (inp.compare("ADD") == 0)
-			book
 
+	while (true)
+	{
+		std::cout << "Phonebook: ";
+		std::cin >> input;
+		if (input == "EXIT")
+			break;
+		if (!book.setCommand(input))
+			return (1);
 	}
 	return (0);
 }
