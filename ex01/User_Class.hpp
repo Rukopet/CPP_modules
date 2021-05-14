@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 
+//typedef const std::string &(*PRIVATE_FuncsFromUsers)();
+
+
 class User {
 public:
 	User(void);
@@ -36,8 +39,11 @@ public:
 	void setUnderwearColor(const std::string &underwearColor);
 	void setDarkestSecret(const std::string &darkestSecret);
 
-
-
+	void Foo();
+//	typedef void (User::*Func_array)();
+//	Func_array funcs[1] = {&User::Foo};
+	typedef const std::string &(User::*func_array)() const;
+	func_array funcs[3];
 private:
 	std::string _first_name;
 	std::string _last_name;

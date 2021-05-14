@@ -1,6 +1,6 @@
 CC = clang++
 NAME = phonebook
-FLAG = -Wall -g #-Wextra -Werror
+FLAG = #-Wall -g #-Wextra -Werror
 SRC = main.cpp User_Class.cpp Phonebook_class.cpp
 
 all: $(NAME)

@@ -1,10 +1,13 @@
 #include "User_Class.hpp"
 
-User::User() : _empty(true) {
+User::User() : _empty(true), funcs{&User::getNickname, &User::getFirstName, &User::getLastName}{
 }
 User::~User() {
 }
 
+//const std::string& PRIVATE_LinksFuncs = {&User::getFirstName,
+//										&User::getFirstName,
+//										&User::getFirstName};
 
 // GETTERS
 
@@ -106,6 +109,11 @@ void User::setFirstName(const std::string &firstName) {
 void User::setLastName(const std::string &lastName) {
 	_last_name = lastName;
 }
+
+void User::Foo() {
+	funcs[0];
+}
+
 
 
 
