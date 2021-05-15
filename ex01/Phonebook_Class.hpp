@@ -6,8 +6,8 @@
 class Phonebook {
 public:
 
-	Phonebook(void);
-	~Phonebook(void);
+	Phonebook();
+	~Phonebook();
 
 	bool setCommand(const std::string &command);
 
@@ -17,10 +17,9 @@ private:
 	bool _add();
 	void _search();
 	int getLastEmptyUser(User *_users);
-	std::string _takeInput(const std::string& Promt);
-	std::string _takeTmpStringWithWidth(const std::string f());
-	typedef const std::string& (*PRIVATE_LinksFuncs)();
-//	PRIVATE_FuncsFromUsers PRIVATE_LinksFuncs[3];
+	static std::string _takeInput(const std::string& Promt);
+	static void _write_with_width(const std::string& f);
+	void _writeSearchOut(User *contact);
 };
 
 #endif //EX01_PHONEBOOK_CLASS_HPP

@@ -9,8 +9,8 @@
 
 class User {
 public:
-	User(void);
-	~User(void);
+	User();
+	~User();
 
 	bool isEmpty() const;
 	const std::string &getLogin() const;

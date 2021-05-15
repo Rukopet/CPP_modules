@@ -21,7 +21,11 @@ std::string Phonebook::_takeInput(const std::string& Promt) {
 bool Phonebook::_add() {
 	int lastUser = getLastEmptyUser(_users);
 	if (lastUser > 8)
-		return (false);
+	{
+		std::cout << "Full phonebook, you already have 8 contacts" <<
+		std::endl;
+		return (true);
+	}
 	_users[lastUser].setFirstName(_takeInput("Enter FIRST NAME: "));
 	_users[lastUser].setLastName(_takeInput("Enter LAST NAME: "));
 	_users[lastUser].setNickname(_takeInput("Enter NICKNAME: "));
@@ -42,35 +46,53 @@ void Phonebook::_search() {
 	std::string tmpStr;
 	while (!_users[index].isEmpty() && index < 8)
 	{
-		std::cout << index;
+		std::cout.width(10);
+		std::cout << std::left <<index;
+		std::cout <<"|";
+		_write_with_width(_users->getFirstName());
 		std::cout << "|";
-		for (int i = 0; i < 3; ++i)
-		{
-//			tmpStr = _takeTmpStringWithWidth(PRIVATE_LinksFuncs[i]);
-//			tmpStr = _takeTmpStringWithWidth(_users[index].funcs[i]());
-			std::cout << tmpStr << "|";
-		}
+		_write_with_width(_users->getLastName());
+		std::cout << "|";
+		_write_with_width(_users->getNickname());
 		std::cout << std::endl;
 		++index;
 	}
-	std::string input = _takeInput("Enter ID: ");
-	int ind = std::stoi(input);
+	if (index == 0)
+		return;
+	int ind;
+	try {
+		std::string input = _takeInput("Enter ID: ");
+		ind = std::stoi(input);
+	}
+	catch (const std::invalid_argument& ex) {
+		std::cout << ex.what() << std::endl;
+		std::cout << "Wrong INPUT" << std::endl;
+		return;
+	}
+	catch (const std::out_of_range& ex)	{
+		std::cout << ex.what() << std::endl;
+		std::cout << "Wrong INPUT" << std::endl;
+		return;
+	}
 	if (ind < 0 || ind > 7)
 	{
 		std::cout << "Wrong user INDEX" << std::endl;
 		return;
 	}
-
+	else
+		_writeSearchOut(&_users[ind]);
 };
 
-std::string Phonebook::_takeTmpStringWithWidth(const std::string f())
+void Phonebook::_write_with_width(const std::string& f)
 {
 	std::string tmp;
-	tmp = f();
+	tmp = f;
 	if (tmp.length() > 10)
-		tmp[10] = '.';
-	return tmp.substr(0, 10);
-}
+		tmp[9] = '.';
+	std::cout.width(10);
+	std::string ret = tmp.substr(0, 10);
+	std::cout << ret;
+};
 
 bool Phonebook::setCommand(const std::string &command) {
 	_command = command;
@@ -85,11 +107,33 @@ bool Phonebook::setCommand(const std::string &command) {
 		std::cout << "Incorrect command : \"" << command << \
 		"\", try ADD, SEARCH, EXIT" << std::endl;
 	return (true);
-}
+};
 
 int Phonebook::getLastEmptyUser(User *users) {
 	int ret = 0;
 	while (!users[ret].isEmpty())
 		++ret;
 	return ret;
+};
+
+void Phonebook::_writeSearchOut(User *contact) {
+	std::cout << std::endl << "FIRST NAME: \t\t|\t" <<
+	contact->getFirstName() << std::endl;
+	std::cout << "LAST NAME: \t\t|\t"<< contact->getLastName() << std::endl;
+	std::cout << "NICKNAME: \t\t|\t"<< contact->getNickname() << std::endl;
+	std::cout << "LOGIN: \t\t\t|\t"<< contact->getLogin() << std::endl;
+	std::cout << "POSTAL ADDRESS: \t|\t"<< contact->getPostalAddress() <<
+	std::endl;
+	std::cout << "EMAIL ADDRESS: \t\t|\t"<< contact->getEmailAddress() <<
+	std::endl;
+	std::cout << "PHONE NUMBER: \t\t|\t"<< contact->getPhoneNumber() <<
+	std::endl;
+	std::cout << "BIRTHDAY DATE: \t\t|\t"<< contact->getBirthdayDate() <<
+	std::endl;
+	std::cout << "FAVORITE MEAL: \t\t|\t"<< contact->getFavoriteMeal() <<
+	std::endl;
+	std::cout << "UNDERWEAR COLOR: \t|\t"<< contact->getUnderwearColor() <<
+	std::endl;
+	std::cout << "DARKEST SECRET: \t|\t"<< contact->getDarkestSecret() <<
+	std::endl << std::endl;
 }

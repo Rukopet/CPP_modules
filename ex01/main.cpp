@@ -5,12 +5,10 @@ void Foo()
 	std::cout << "Foo" << std::endl;
 }
 
-int 		main(int argc, char **argv)
+int 		main()
 {
 	std::string input;
 	Phonebook	book;
-	User user;
-	user.funcs[0];
 	while (true)
 	{
 		std::cout << "Phonebook: ";
