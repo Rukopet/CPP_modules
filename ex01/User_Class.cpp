@@ -1,6 +1,6 @@
 #include "User_Class.hpp"
 
-User::User() : _empty(true), funcs{&User::getNickname, &User::getFirstName, &User::getLastName}{
+User::User() : _empty(true) {
 }
 User::~User() {
 }
@@ -110,9 +110,6 @@ void User::setLastName(const std::string &lastName) {
 	_last_name = lastName;
 }
 
-void User::Foo() {
-	funcs[0];
-}
 
 
 

@@ -19,8 +19,8 @@ private:
 	int getLastEmptyUser(User *_users);
 	std::string _takeInput(const std::string& Promt);
 	std::string _takeTmpStringWithWidth(const std::string f());
+	typedef const std::string& (*PRIVATE_LinksFuncs)();
 //	PRIVATE_FuncsFromUsers PRIVATE_LinksFuncs[3];
-	const std::string& (*PRIVATE_LinksFuncs)();
 };
 
 #endif //EX01_PHONEBOOK_CLASS_HPP
