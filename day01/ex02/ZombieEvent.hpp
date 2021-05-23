@@ -20,8 +20,7 @@ private:
 	std::string _zombieType;
 	const std::string &getZombieType() const;
 	std::string randomMessage();
-	std::string _NameArray[10] = {"budz" , "pain" , "konan","nagato", "itachi",
-								 "tobi", "madara", "naruto", "danzou", "kakashi"};
+	static const std::string _NameArray[10];
 
 };
 

@@ -1,5 +1,8 @@
 #include "ZombieEvent.hpp"
 
+const std::string ZombieEvent::_NameArray[10] = {"budz" , "pain" , "konan",\
+	"nagato", "itachi", "tobi", "madara", "naruto", "danzou", "kakashi"};
+
 ZombieEvent::ZombieEvent() {}
 ZombieEvent::ZombieEvent(const std::string &zombieType) : _zombieType(
 		zombieType) {}
@@ -14,6 +17,7 @@ void ZombieEvent::randomChomp() {
 Zombie *ZombieEvent::newZombie(std::string name) {
 	std::string tmp = getZombieType();
 	Zombie *newZombie = new Zombie(tmp);
+	newZombie->setName(name);
 	return newZombie;
 }
 

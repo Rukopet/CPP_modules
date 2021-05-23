@@ -40,10 +40,6 @@ public:
 	void setDarkestSecret(const std::string &darkestSecret);
 
 
-//	typedef void (User::*Func_array)();
-//	Func_array funcs[1] = {&User::Foo};
-//	typedef const std::string &(User::*func_array)() const;
-//	func_array funcs[3];
 
 private:
 
@@ -58,7 +54,6 @@ private:
 	std::string _favorite_meal;
 	std::string _underwear_color;
 	std::string _darkest_secret;
-	std::string _asjdfbadsljn;
 	bool _empty;
 
 };

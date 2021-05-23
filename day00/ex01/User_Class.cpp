@@ -5,9 +5,6 @@ User::User() : _empty(true) {
 User::~User() {
 }
 
-//const std::string& PRIVATE_LinksFuncs = {&User::getFirstName,
-//										&User::getFirstName,
-//										&User::getFirstName};
 
 // GETTERS
 

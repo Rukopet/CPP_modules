@@ -6,7 +6,7 @@ Zombie::Zombie(const std::string &zombieType) : zombieType(zombieType) {}
 
 void Zombie::announce() {
 	std::cout << "<" << getName() << " (" << getZombieType() << ")>";
-	if (getName() == "42")
+	if (getZombieType() == "42")
 		std::cout << " NORME ONE LOVE <3" << std::endl;
 	else
 		std::cout << " Braiiiiiiinnnssss..." << std::endl;
