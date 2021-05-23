@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 	ponyOnTheHeap(tmpPony);
 	ponyOnTheStack();
 	delete tmpPony;
-	if (argv[1] == std::string("1"))
+	if (argv[1] || argc > 1)
 		for (bool flag = true;;)
 		{
 			if (flag)

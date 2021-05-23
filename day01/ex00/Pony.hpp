@@ -23,7 +23,6 @@ public:
 	void setNickname(const std::string &nickname);
 	void setWeight(const std::string &weight);
 
-
 };
 
 
