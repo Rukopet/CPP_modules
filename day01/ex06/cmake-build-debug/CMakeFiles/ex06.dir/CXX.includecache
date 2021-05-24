@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day01/ex06/HumanB.cpp
+HumanB.hpp
+/Users/egums/CPP_modules/day01/ex06/HumanB.hpp
+
+/Users/egums/CPP_modules/day01/ex06/HumanB.hpp
+Weapon.hpp
+/Users/egums/CPP_modules/day01/ex06/Weapon.hpp
+
+/Users/egums/CPP_modules/day01/ex06/Weapon.hpp
+iostream
+-
+

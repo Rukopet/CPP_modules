@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day01/ex05/Brain.hpp
+iostream
+-
+sstream
+-
+
+/Users/egums/CPP_modules/day01/ex05/Human.cpp
+Human.hpp
+/Users/egums/CPP_modules/day01/ex05/Human.hpp
+
+/Users/egums/CPP_modules/day01/ex05/Human.hpp
+Brain.hpp
+/Users/egums/CPP_modules/day01/ex05/Brain.hpp
+
+/Users/egums/CPP_modules/day01/ex05/main.cpp
+iostream
+-
+Human.hpp
+/Users/egums/CPP_modules/day01/ex05/Human.hpp
+
