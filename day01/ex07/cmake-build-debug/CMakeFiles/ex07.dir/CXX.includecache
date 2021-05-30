@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day01/ex07/main.cpp
+pars.hpp
+/Users/egums/CPP_modules/day01/ex07/pars.hpp
+
+/Users/egums/CPP_modules/day01/ex07/pars.cpp
+pars.hpp
+/Users/egums/CPP_modules/day01/ex07/pars.hpp
+
+/Users/egums/CPP_modules/day01/ex07/pars.hpp
+iostream
+-
+fstream
+-
+

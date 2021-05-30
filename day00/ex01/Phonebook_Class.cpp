@@ -121,6 +121,11 @@ int Phonebook::getLastEmptyUser(User *users) {
 };
 
 void Phonebook::_writeSearchOut(User *contact) {
+	if (contact->isEmpty())
+	{
+		std::cout << "\tIncorrect ID!" << std::endl;
+		return;
+	}
 	std::cout << std::endl << "FIRST NAME: \t\t|\t" <<
 	contact->getFirstName() << std::endl;
 	std::cout << "LAST NAME: \t\t|\t"<< contact->getLastName() << std::endl;
