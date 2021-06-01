@@ -26,6 +26,7 @@ public:
 		this->RawBits++;
 		return *this;
 	}
+	// Postfix
 	Fixed &operator++(int)
 	{
 		Fixed temp(*this);
@@ -38,6 +39,7 @@ public:
 		this->RawBits--;
 		return *this;
 	}
+	//	Postfix
 	Fixed &operator--(int)
 	{
 		Fixed temp(*this);
