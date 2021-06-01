@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ex00
+# Target rules for targets named ex01
 
 # Build rule for target.
-ex00: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ex00
-.PHONY : ex00
+ex01: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ex01
+.PHONY : ex01
 
 # fast build rule for target.
-ex00/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/build
-.PHONY : ex00/fast
+ex01/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/build
+.PHONY : ex01/fast
 
 Fixed.o: Fixed.cpp.o
 
@@ -148,7 +148,7 @@ Fixed.o: Fixed.cpp.o
 
 # target to build an object file
 Fixed.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Fixed.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/Fixed.cpp.o
 .PHONY : Fixed.cpp.o
 
 Fixed.i: Fixed.cpp.i
@@ -157,7 +157,7 @@ Fixed.i: Fixed.cpp.i
 
 # target to preprocess a source file
 Fixed.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Fixed.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/Fixed.cpp.i
 .PHONY : Fixed.cpp.i
 
 Fixed.s: Fixed.cpp.s
@@ -166,7 +166,7 @@ Fixed.s: Fixed.cpp.s
 
 # target to generate assembly for a file
 Fixed.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Fixed.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/Fixed.cpp.s
 .PHONY : Fixed.cpp.s
 
 main.o: main.cpp.o
@@ -175,7 +175,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -184,7 +184,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -193,7 +193,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex01.dir/build.make CMakeFiles/ex01.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -204,7 +204,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ex00"
+	@echo "... ex01"
 	@echo "... Fixed.o"
 	@echo "... Fixed.i"
 	@echo "... Fixed.s"

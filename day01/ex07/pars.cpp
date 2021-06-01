@@ -14,45 +14,54 @@ bool pars::takeArg(char *arg, std::string &strToEnter) {
 void pars::replaceArguments() {
 	std::fstream our_file;
 
-
 	try {
-		our_file.open(*getStrFileName(), std::fstream::in | std::fstream::out);
-		our_file.exceptions (std::fstream::eofbit | std::fstream::failbit |
-		std::fstream::badbit);
+		our_file.open(getStrFileName(), std::fstream::in | std::fstream::out);
 	}
 	catch (std::exception const& e) {
-		std::cout << "Error while open file: "<< *getStrFileName() <<
+		std::cout << "Error while open file: "<< getStrFileName() <<
 		std::endl;
 		std::cout << e.what() << std::endl;
 		our_file.close();
 		return;
 	}
 
+	std::stringstream line_stream;
+	std::string full_line;
 
-	std::string tmp_line, full_line;
-	char *buffer = nullptr;
-	while (our_file)
-	{
-		our_file.getline(buffer, 100);
-		tmp_line = buffer;
-		full_line += tmp_line;
-	}
-	size_t len = getStrFind()->length();
-	size_t len_replace = getStrForReplace()->length();
+	line_stream << our_file.rdbuf();
+	full_line = line_stream.str();
+
+	size_t len = getStrFind().length();
+	size_t len_replace = getStrForReplace().length();
 	size_t found = 0;
-	while (std::string::npos != full_line.find(*getStrFind(), found))
+	while (std::string::npos != (found = full_line.find(getStrFind(), found)))
 	{
-		full_line.replace(found, len_replace, *getStrForReplace());
+		full_line.replace(found, len, getStrForReplace());
 		found += len;
 	}
 	our_file.close();
+
+	std::ofstream nico;
+	try {
+		nico.open(getStrFileName() + ".replace", std::ifstream::in |
+		std::ifstream::trunc);
+	}
+	catch (std::exception const& e) {
+		std::cout << "Error while open file: "<< getStrFileName() <<
+				  std::endl;
+		std::cout << e.what() << std::endl;
+		our_file.close();
+		return;
+	}
+	nico << full_line;
+	nico.close();
 }
 
 
 void pars::checkArguments() {
-	std::cout << "FILENAME:\t" << *getStrFileName() << std::endl;
-	std::cout << "STR_TO_FIND:\t" << *getStrFind() << std::endl;
-	std::cout << "STR_TO_REPLACE:\t" << *getStrForReplace() << std::endl;
+	std::cout << "FILENAME:\t" << getStrFileName() << std::endl;
+	std::cout << "STR_TO_FIND:\t" << getStrFind() << std::endl;
+	std::cout << "STR_TO_REPLACE:\t" << getStrForReplace() << std::endl;
 }
 
 
@@ -84,7 +93,6 @@ std::string pars::getStrFileName() const {
 
 
 
-
 void pars::setStrFind(std::string &strFind) {
 	_strFind = strFind;
 }
@@ -96,11 +104,5 @@ void pars::setStrFileName(std::string &strFileName) {
 }
 
 pars::~pars() {
-//	if (_strForReplace)
-//		delete[] _strFileName;
-//	if (_strFind)
-//		delete[] _strFind;
-//	if (_strForReplace)
-//		delete[] _strForReplace;
 }
 

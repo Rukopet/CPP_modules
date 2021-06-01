@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 class pars {
 public:
@@ -12,6 +13,9 @@ public:
 	bool parseArgv(char **argv);
 	void checkArguments();
 	void replaceArguments();
+	void setStrFind(std::string &strFind);
+	void setStrForReplace(std::string &strForReplace);
+	void setStrFileName(std::string &strFileName);
 
 private:
 	std::string _strFind;
@@ -22,9 +26,6 @@ private:
 	std::string getStrForReplace() const;
 	std::string getStrFileName() const;
 
-	void setStrFind(std::string &strFind);
-	void setStrForReplace(std::string &strForReplace);
-	void setStrFileName(std::string &strFileName);
 	bool takeArg(char *arg, std::string &strToEnter);
 };
 

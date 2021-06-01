@@ -11,5 +11,6 @@ int main(int argc, char **argv) {
 	if (!P.parseArgv(argv))
 		return (-1);
 	P.checkArguments();
+	P.replaceArguments();
 	return 0;
 }
