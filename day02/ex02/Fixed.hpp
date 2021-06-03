@@ -40,7 +40,7 @@ public:
 		return *this;
 	}
 	//	Postfix
-	Fixed &operator--(int)
+	Fixed operator--(int)
 	{
 		Fixed temp(*this);
 		this->RawBits--;

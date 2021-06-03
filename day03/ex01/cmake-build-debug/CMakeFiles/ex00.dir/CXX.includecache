@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day03/ex01/FragTrap.hpp
+iostream
+-
+
+/Users/egums/CPP_modules/day03/ex01/ScavTrap.cpp
+ScavTrap.hpp
+/Users/egums/CPP_modules/day03/ex01/ScavTrap.hpp
+
+/Users/egums/CPP_modules/day03/ex01/ScavTrap.hpp
+iostream
+-
+
+/Users/egums/CPP_modules/day03/ex01/main.cpp
+FragTrap.hpp
+/Users/egums/CPP_modules/day03/ex01/FragTrap.hpp
+ScavTrap.hpp
+/Users/egums/CPP_modules/day03/ex01/ScavTrap.hpp
+
