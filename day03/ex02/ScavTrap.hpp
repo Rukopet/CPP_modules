@@ -5,16 +5,11 @@
 #include <iostream>
 
 class ScavTrap : public ClapTrap {
+	std::string _announcePrefix();
 public:
 	ScavTrap(const std::string &name);
-	void rangedAttack(std::string &target);
-	void meleeAttack(std::string &target);
-	void takeDamage(unsigned  int amount);
-	void beRepaired(unsigned int amount);
 	void challengeNewcomer();
 	virtual ~ScavTrap();
-
 };
-
 
 #endif //EX02_SCAVTRAP_HPP

@@ -14,14 +14,14 @@ public:
 
 
 	void setHitPoints(unsigned int hitPoints);
-	void setMaxHitPoints(unsigned int maxHitPoints);
+	void setMaxHitPoints(unsigned int maxHP);
 	void setEnergyPoints(unsigned int energyPoints);
-	void setMaxEnergyPoints(unsigned int maxEnergyPoints);
-	void setLevel(unsigned int level);
+	void setMaxEnergyPoints(unsigned int maxEnergy);
+	void setLevel(unsigned int lvl);
 	void setName(const std::string &name);
-	void setMeleeAttackDamage(unsigned int meleeAttackDamage);
-	void setRangedAttackDamage(unsigned int rangedAttackDamage);
-	void setArmorDamageReduction(unsigned int armorDamageReduction);
+	void setMeleeAttackDamage(unsigned int AttackDamage);
+	void setRangedAttackDamage(unsigned int AttackDamage);
+	void setArmorDamageReduction(unsigned int DamageReduction);
 
 
 	unsigned int getHitPoints() const;
@@ -34,8 +34,14 @@ public:
 	unsigned int getRangedAttackDamage() const;
 	unsigned int getArmorDamageReduction() const;
 
+	void rangedAttack(std::string &target);
+	void meleeAttack(std::string &target);
+	void takeDamage(unsigned  int amount);
+	void beRepaired(unsigned int amount);
+
 
 protected:
+	virtual std::string _announcePrefix();
 	unsigned int HitPoints;
 	unsigned int maxHitPoints;
 	unsigned int EnergyPoints;

@@ -2,18 +2,10 @@
 #define EX02_FRAGTRAP_HPP
 
 #include <iostream>
+#include "ClapTrap.hpp"
 
 
-class FragTrap {
-	unsigned int HitPoints;
-	unsigned int maxHitPoints;
-	unsigned int EnergyPoints;
-	unsigned int maxEnergyPoints;
-	unsigned int level;
-	std::string Name;
-	unsigned int meleeAttackDamage;
-	unsigned int rangedAttackDamage;
-	unsigned int armorDamageReduction;
+class FragTrap : public ClapTrap {
 	void prologueAttack(const std::string &target);
 	void annoyingAttack(const std::string &target);
 	void beatboxAttack(const std::string &target);
@@ -22,12 +14,8 @@ class FragTrap {
 public:
 	FragTrap(const std::string &name);
 	virtual ~FragTrap();
-	void rangedAttack(std::string &target);
-	void meleeAttack(std::string &target);
-	void takeDamage(unsigned  int amount);
-	void beRepaired(unsigned int amount);
 	void vaulthunter_dot_exe(std::string const &target);
-	unsigned int getRangedAttackDamage() const;
+	std::string _announcePrefix();
 };
 
 typedef void(FragTrap::*funcs) (const std::string &target);
