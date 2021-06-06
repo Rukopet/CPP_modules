@@ -8,12 +8,17 @@ Phonebook::~Phonebook() {
 
 std::string Phonebook::_takeInput(const std::string& Promt) {
 	std::string input;
-	std::cout << Promt;
-	std::cin >> input;
-	if (std::cin.eof())
+	while (true)
 	{
-		std::cout << "Whoops, unexpected happens o_O" << std::endl;
-		exit(0);
+		std::cout << Promt;
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			exit(1);
+		}
+		if (!input.empty())
+			break;
 	}
 	return input;
 };
@@ -26,6 +31,8 @@ bool Phonebook::_add() {
 		std::endl;
 		return (true);
 	}
+	std::cout << "Please fill fields, with non empty strings!" << std::endl;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 	_users[lastUser].setFirstName(_takeInput("Enter FIRST NAME: "));
 	_users[lastUser].setLastName(_takeInput("Enter LAST NAME: "));
 	_users[lastUser].setNickname(_takeInput("Enter NICKNAME: "));
@@ -61,6 +68,7 @@ void Phonebook::_search() {
 		return;
 	int ind;
 	try {
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 		std::string input = _takeInput("Enter ID: ");
 		ind = std::stoi(input);
 	}
@@ -74,10 +82,6 @@ void Phonebook::_search() {
 		std::cout << "Wrong INPUT" << std::endl;
 		return;
 	}
-//	catch (...) {
-//		std::cout << "Wrong INPUT" << std::endl;
-//		return;
-//	}
 	if (ind < 0 || ind > 7)
 	{
 		std::cout << "Wrong user INDEX" << std::endl;
