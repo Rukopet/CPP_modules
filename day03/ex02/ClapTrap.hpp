@@ -11,6 +11,8 @@ public:
 			 unsigned int level, const std::string &name,
 			 unsigned int meleeAttackDamage, unsigned int rangedAttackDamage,
 			 unsigned int armorDamageReduction);
+	ClapTrap(std::string const &name);
+	ClapTrap(const ClapTrap& trap);
 
 
 	void setHitPoints(unsigned int hitPoints);
@@ -38,7 +40,7 @@ public:
 	void meleeAttack(std::string &target);
 	void takeDamage(unsigned  int amount);
 	void beRepaired(unsigned int amount);
-
+	ClapTrap &operator=(ClapTrap const &right);
 
 protected:
 	virtual std::string _announcePrefix();

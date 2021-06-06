@@ -7,8 +7,11 @@
 class SuperTrap : public FragTrap, public NinjaTrap {
 public:
 	SuperTrap(const std::string &name);
-
+	SuperTrap(SuperTrap const &other);
+	SuperTrap();
 	virtual ~SuperTrap();
+
+	SuperTrap &operator=(const SuperTrap& trap);
 
 private:
 	std::string _announcePrefix();

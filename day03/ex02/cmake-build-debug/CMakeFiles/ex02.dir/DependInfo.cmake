@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/egums/CPP_modules/day03/ex02/ClapTrap.cpp" "/Users/egums/CPP_modules/day03/ex02/cmake-build-debug/CMakeFiles/ex02.dir/ClapTrap.cpp.o"
+  "/Users/egums/CPP_modules/day03/ex02/FragTrap.cpp" "/Users/egums/CPP_modules/day03/ex02/cmake-build-debug/CMakeFiles/ex02.dir/FragTrap.cpp.o"
+  "/Users/egums/CPP_modules/day03/ex02/ScavTrap.cpp" "/Users/egums/CPP_modules/day03/ex02/cmake-build-debug/CMakeFiles/ex02.dir/ScavTrap.cpp.o"
   "/Users/egums/CPP_modules/day03/ex02/main.cpp" "/Users/egums/CPP_modules/day03/ex02/cmake-build-debug/CMakeFiles/ex02.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -5,10 +5,26 @@ ClapTrap(100, 100, 100, 100, 1, name, 30, 20, 5) {
 	std::cout << "\"ClapTrap the BEST in FR4G-TP ±\"" << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap &trap) : ClapTrap(trap) {
+	std::cout << "Copy constructor of FragTrap" << std::endl;
+}
+
+FragTrap::FragTrap() : ClapTrap() {
+	std::cout << "Default FragTrap Constructor" << std::endl;
+}
+
 FragTrap::~FragTrap() {
 	std::cout << "\"Turning off the optics... they can't see me...\"" << std::endl;
 }
 
+// calling operator= from ClapTrap in FragTrap
+FragTrap &FragTrap::operator=(const FragTrap& trap)
+{
+	if (this == &trap)
+		return (*this);
+	ClapTrap::operator=(trap);
+	return (*this);
+}
 
 void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	if (this->EnergyPoints < 25)
@@ -21,7 +37,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	int attackType = std::rand() % 5;
 	funcs attacks[] = {&FragTrap::prologueAttack, &FragTrap::annoyingAttack,
 	&FragTrap::beatboxAttack, &FragTrap::stupidjokesAttack, &FragTrap::panicAttack};
-	funcs a = &FragTrap::prologueAttack;
+//	funcs a = &FragTrap::prologueAttack;
 	(this->*attacks[attackType])(target);
 }
 
@@ -54,11 +70,14 @@ void FragTrap::stupidjokesAttack(const std::string &target) {
 }
 
 void FragTrap::panicAttack(const std::string &target) {
-	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at panic attack, causing "
-	<< 5 << " points of damage!" << std::endl;
-	std::cout << "FR4G-TP " << this->Name << ": \"I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!\"" << std::endl;
+	std::cout << "FR4G-TP " << this->Name << " attacks " << target
+			  << " at panic attack, causing "
+			  << 5 << " points of damage!" << std::endl;
+	std::cout << "FR4G-TP " << this->Name
+			  << ": \"I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!\""
+			  << std::endl;
 }
 
-std::string FragTrap::_announcePrefix()  {
+std::string FragTrap::_announcePrefix() {
 	return "FR4G-TP ";
 }

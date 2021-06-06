@@ -5,6 +5,10 @@ ClapTrap(60, 60, 120, 120, 1, name, 60, 5, 0) {
 	std::cout << "\"ClapTrap the BEST in NINJA-TP ±\"" << std::endl;
 }
 
+NinjaTrap::NinjaTrap() : ClapTrap() {std::cout << "STD CONSTR NINJA" << std::endl; }
+
+NinjaTrap::NinjaTrap(const NinjaTrap &trap) : ClapTrap(trap) { std::cout << "COPY CONSTR NINJA" << std::endl; }
+
 std::string NinjaTrap::_announcePrefix() {
 	return "NINJA-TP ";
 }
@@ -34,4 +38,12 @@ void NinjaTrap::ninjaShoebox(NinjaTrap &trap) {
 	std::cout << _announcePrefix() << this->Name\
 	<< " exchanges experience with " << trap.Name << " and increases its level, yes, you can exchange experience with yourself :D" << std::endl;
 	this->level += 1;
+}
+
+NinjaTrap &NinjaTrap::operator=(const NinjaTrap& trap)
+{
+	if (this == &trap)
+		return (*this);
+	ClapTrap::operator=(trap);
+	return (*this);
 }

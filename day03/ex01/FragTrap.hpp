@@ -21,6 +21,8 @@ class FragTrap {
 	void panicAttack(const std::string &target);
 public:
 	FragTrap(const std::string &name);
+	FragTrap(const FragTrap& trap);
+	FragTrap();
 	virtual ~FragTrap();
 	void rangedAttack(std::string &target);
 	void meleeAttack(std::string &target);
@@ -28,6 +30,7 @@ public:
 	void beRepaired(unsigned int amount);
 	void vaulthunter_dot_exe(std::string const &target);
 	unsigned int getRangedAttackDamage() const;
+	FragTrap &operator=(FragTrap const &right);
 };
 
 typedef void(FragTrap::*funcs) (const std::string &target);

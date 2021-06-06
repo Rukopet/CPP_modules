@@ -9,6 +9,10 @@ class NinjaTrap : virtual public ClapTrap {
 	std::string _announcePrefix();
 public:
 	NinjaTrap(const std::string &name);
+	NinjaTrap(const NinjaTrap &trap);
+	NinjaTrap();
+	NinjaTrap &operator=(const NinjaTrap& trap);
+
 	void ninjaShoebox(ClapTrap &trap);
 	void ninjaShoebox(FragTrap &trap);
 	void ninjaShoebox(ScavTrap &trap);

@@ -29,7 +29,8 @@ int main() {
 	Cv.takeDamage(two.getRangedAttackDamage());
 	Cv.beRepaired(3);
 	Cv.challengeNewcomer();
-	ClapTrap ork("ork");
+	ClapTrap ork(Cv);
+	ork.meleeAttack(targetName[3]);
 	NinjaTrap Ninja("Hokage");
 	Ninja.ninjaShoebox(ork);
 	Ninja.ninjaShoebox(one);

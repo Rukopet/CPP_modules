@@ -7,6 +7,20 @@ armorDamageReduction(5) {
 					  "best robot. Ooh, ooh, here we go!\"" << std::endl;
 }
 
+FragTrap::FragTrap() : Name(), HitPoints(0), maxHitPoints(0),
+EnergyPoints(0), maxEnergyPoints(0), level(0), meleeAttackDamage(0),
+rangedAttackDamage(0), armorDamageReduction(0) {
+	std::cout << "Default constructor FragTrap" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& trap) : Name(trap.Name), HitPoints(trap.HitPoints),
+EnergyPoints(trap.EnergyPoints), maxHitPoints(trap.maxHitPoints),
+maxEnergyPoints(trap.maxEnergyPoints), level(trap.level), meleeAttackDamage(trap.meleeAttackDamage),
+rangedAttackDamage(trap.rangedAttackDamage), armorDamageReduction(trap.armorDamageReduction)
+{
+	std::cout << "Copy constructor of FragTrap" << std::endl;
+}
+
 FragTrap::~FragTrap() {
 	std::cout << "\"Turning off the optics... they can't see me...\"" << std::endl;
 }
@@ -97,4 +111,18 @@ void FragTrap::panicAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at panic attack, causing "
 	<< 5 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!\"" << std::endl;
+}
+
+FragTrap &FragTrap::operator=(FragTrap const &right)
+{
+	this->HitPoints = right.HitPoints;
+	this->maxHitPoints = right.maxHitPoints;
+	this->EnergyPoints = right.EnergyPoints;
+	this->maxEnergyPoints = right.maxEnergyPoints;
+	this->level = right.level;
+	this->Name = right.Name;
+	this->meleeAttackDamage = right.meleeAttackDamage;
+	this->rangedAttackDamage = right.rangedAttackDamage;
+	this->armorDamageReduction = right.armorDamageReduction;
+	return *this;
 }

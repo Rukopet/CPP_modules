@@ -14,13 +14,16 @@ class ScavTrap {
 	unsigned int rangedAttackDamage;
 	unsigned int armorDamageReduction;
 public:
+	ScavTrap();
 	ScavTrap(const std::string &name);
+	ScavTrap(const ScavTrap& trap);
 	void rangedAttack(std::string &target);
 	void meleeAttack(std::string &target);
 	void takeDamage(unsigned  int amount);
 	void beRepaired(unsigned int amount);
 	void challengeNewcomer();
 	virtual ~ScavTrap();
+	ScavTrap &operator=(ScavTrap const &right);
 
 };
 

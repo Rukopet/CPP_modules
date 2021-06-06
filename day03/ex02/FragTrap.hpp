@@ -13,9 +13,12 @@ class FragTrap : public ClapTrap {
 	void panicAttack(const std::string &target);
 public:
 	FragTrap(const std::string &name);
+	FragTrap(const FragTrap &trap);
+	FragTrap();
 	virtual ~FragTrap();
 	void vaulthunter_dot_exe(std::string const &target);
 	std::string _announcePrefix();
+	FragTrap &operator=(const FragTrap& trap);
 };
 
 typedef void(FragTrap::*funcs) (const std::string &target);

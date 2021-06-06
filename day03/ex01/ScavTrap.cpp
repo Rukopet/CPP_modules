@@ -5,6 +5,21 @@ EnergyPoints(50), maxEnergyPoints(50), level(1), meleeAttackDamage(20), rangedAt
 armorDamageReduction(3) {
 	std::cout << name << ": Borderlands: The Pre-Sequel so gooood" << std::endl;
 }
+
+ScavTrap::ScavTrap() : Name(), HitPoints(0), maxHitPoints(0),
+EnergyPoints(0), maxEnergyPoints(0), level(0), meleeAttackDamage(0),
+rangedAttackDamage(0), armorDamageReduction(0) {
+	std::cout << "Default constructor FragTrap" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& trap) : Name(trap.Name), HitPoints(trap.HitPoints),
+EnergyPoints(trap.EnergyPoints), maxHitPoints(trap.maxHitPoints),
+maxEnergyPoints(trap.maxEnergyPoints), level(trap.level), meleeAttackDamage(trap.meleeAttackDamage),
+rangedAttackDamage(trap.rangedAttackDamage), armorDamageReduction(trap.armorDamageReduction)
+{
+	std::cout << "Copy constructor of ScavTrap" << std::endl;
+}
+
 ScavTrap::~ScavTrap() {
 	std::cout << "\"Back for more!\"" << std::endl;
 }
@@ -61,4 +76,18 @@ void ScavTrap::challengeNewcomer() {
  	int chell = rand() % 11;
 	std::cout << "NEW CHALLANGE FOR SC4V-TP " << this->Name << " " << std::endl;
 	std::cout << "**** " << chellanges[chell] << " ****" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(ScavTrap const &right)
+{
+	this->HitPoints = right.HitPoints;
+	this->maxHitPoints = right.maxHitPoints;
+	this->EnergyPoints = right.EnergyPoints;
+	this->maxEnergyPoints = right.maxEnergyPoints;
+	this->level = right.level;
+	this->Name = right.Name;
+	this->meleeAttackDamage = right.meleeAttackDamage;
+	this->rangedAttackDamage = right.rangedAttackDamage;
+	this->armorDamageReduction = right.armorDamageReduction;
+	return *this;
 }

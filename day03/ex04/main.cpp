@@ -28,7 +28,8 @@ int main() {
 	Cv.takeDamage(two.getRangedAttackDamage());
 	Cv.beRepaired(3);
 	Cv.challengeNewcomer();
-	ClapTrap ork("ork");
+	ClapTrap ork(Cv);
+	Cv.meleeAttack(targetName[2]);
 	NinjaTrap Ninja("Hokage");
 	Ninja.ninjaShoebox(ork);
 	Ninja.ninjaShoebox(one);
@@ -38,5 +39,7 @@ int main() {
 
 	SuperTrap SUP("SUPER");
 	SUP.vaulthunter_dot_exe(Ninja.getName());
+	SUP.ninjaShoebox(Cv);
+	SuperTrap kek(SUP);
 	SUP.ninjaShoebox(Cv);
 }

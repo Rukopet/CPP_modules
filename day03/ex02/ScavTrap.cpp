@@ -5,6 +5,14 @@ ClapTrap(100, 100, 50, 50, 1, name, 20, 15, 3) {
 	std::cout << name << ": Borderlands: The Pre-Sequel so gooood" << std::endl;
 };
 
+ScavTrap::ScavTrap(const ScavTrap &trap) : ClapTrap(trap) {
+	std::cout << "Copy constructor of ScavTrap" << std::endl;
+}
+
+ScavTrap::ScavTrap() : ClapTrap() {
+	std::cout << "Default ScavTrap Constructor" << std::endl;
+}
+
 ScavTrap::~ScavTrap() {
 	std::cout << "\"Back for more!\"" << std::endl;
 }
@@ -28,4 +36,12 @@ void ScavTrap::challengeNewcomer() {
 
 std::string ScavTrap::_announcePrefix()  {
 	return "SC4V-TP ";
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap& trap)
+{
+	if (this == &trap)
+		return (*this);
+	ClapTrap::operator=(trap);
+	return (*this);
 }

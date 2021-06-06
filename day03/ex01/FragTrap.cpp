@@ -4,7 +4,21 @@ FragTrap::FragTrap(const std::string &name) : Name(name), HitPoints(100), maxHit
 EnergyPoints(100), maxEnergyPoints(100), level(1), meleeAttackDamage(30), rangedAttackDamage(20),
 armorDamageReduction(5) {
 	std::cout << name << ": \"I am the best robot. Yeah, yeah, yeah, I am the "
-					  "best robot. Ooh, ooh, here we go!\"" << std::endl;
+						 "best robot. Ooh, ooh, here we go!\"" << std::endl;
+}
+
+FragTrap::FragTrap() : Name(), HitPoints(0), maxHitPoints(0),
+EnergyPoints(0), maxEnergyPoints(0), level(0), meleeAttackDamage(0),
+rangedAttackDamage(0), armorDamageReduction(0) {
+	std::cout << "Default constructor ScavTrap" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& trap) : Name(trap.Name), HitPoints(trap.HitPoints),
+EnergyPoints(trap.EnergyPoints), maxHitPoints(trap.maxHitPoints),
+maxEnergyPoints(trap.maxEnergyPoints), level(trap.level), meleeAttackDamage(trap.meleeAttackDamage),
+rangedAttackDamage(trap.rangedAttackDamage), armorDamageReduction(trap.armorDamageReduction)
+{
+	std::cout << "Copy constructor of ScavTrap" << std::endl;
 }
 
 FragTrap::~FragTrap() {
@@ -13,7 +27,7 @@ FragTrap::~FragTrap() {
 
 void FragTrap::rangedAttack(std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at range, causing "
-	<< this->rangedAttackDamage << " points of damage!" << std::endl;
+			  << this->rangedAttackDamage << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Wow! You're not dead?\"" << std::endl;
 }
 
@@ -25,18 +39,18 @@ void FragTrap::meleeAttack(std::string &target) {
 
 void FragTrap::takeDamage(unsigned int amount) {
 	amount = (amount < this->armorDamageReduction) ? 0 : amount - this->armorDamageReduction;
-	int current = (this->HitPoints < amount) ? 0 : (int)this->HitPoints - (int)amount;
+	int current = (this->HitPoints < amount) ? 0 : (int)this->HitPoints - (int)amount - (int)this->armorDamageReduction;
 	if (current == 0)
 	{
 		std::cout << "FR4G-TP " << this->Name << " take " << amount << " damage" << ", health has become |"
-		<< "0\\" << this->maxHitPoints << "  SO DEEEAD!" << std::endl;
+				  << "0\\" << this->maxHitPoints << "  SO DEEEAD!" << std::endl;
 		std::cout << "FR4G-TP " << this->Name << ": \"I can see... the code\"" << std::endl;
 	}
 	else
 	{
 		this->HitPoints = (unsigned int)current;
 		std::cout << "FR4G-TP " << this->Name << " take " << amount << " damage" << ", health has become |"
-		<< current << "\\" << this->maxHitPoints << std::endl;
+				  << current << "\\" << this->maxHitPoints << std::endl;
 		std::cout << "FR4G-TP " << this->Name << ": \"Oh my God, I'm leaking! I think I'm leaking! Ahhhh, I'm leaking! There's oil everywhere!\"" << std::endl;
 	}
 }
@@ -58,7 +72,7 @@ void FragTrap::vaulthunter_dot_exe(const std::string &target) {
 	this->EnergyPoints -= 25;
 	int attackType = std::rand() % 5;
 	funcs attacks[] = {&FragTrap::prologueAttack, &FragTrap::annoyingAttack,
-	&FragTrap::beatboxAttack, &FragTrap::stupidjokesAttack, &FragTrap::panicAttack};\
+					   &FragTrap::beatboxAttack, &FragTrap::stupidjokesAttack, &FragTrap::panicAttack};\
 	(this->*attacks[attackType])(target);
 }
 
@@ -68,13 +82,13 @@ unsigned int FragTrap::getRangedAttackDamage() const {
 
 void FragTrap::prologueAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at prologue annoying attack, causing "
-	<< 1 << " points of damage!" << std::endl;
+			  << 1 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Did you find the Vault yet?\"" << std::endl;
 }
 
 void FragTrap::annoyingAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at annoooooying attack, causing "
-	<< 2 << " points of damage!" << std::endl;
+			  << 2 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"I'm over here!\"" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Sure is lonely around here.\"" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"I'm over here!\"" << std::endl;
@@ -82,19 +96,34 @@ void FragTrap::annoyingAttack(const std::string &target) {
 
 void FragTrap::beatboxAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at BEatBoaXing attack, causing "
-	<< 10 << " points of damage!" << std::endl;
+			  << 10 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Wanna hear a new dubstep song I wrote? Wub! Wub\"" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Unce! Unce! Unce! Unce! Ooo, oh check me out. Unce! Unce! Unce! Unce! Oh, come on get down.\" (beatboxing)" << std::endl;
 }
 
 void FragTrap::stupidjokesAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at stupid jokes attack, causing "
-	<< 50 << " points of damage!" << std::endl;
+			  << 50 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"Scooter asked me to tell you about a, uh, \"little sumthin' sumthin' \" he needs done. You should ask him about it!\"" << std::endl;
 }
 
 void FragTrap::panicAttack(const std::string &target) {
 	std::cout << "FR4G-TP " << this->Name << " attacks " << target << " at panic attack, causing "
-	<< 5 << " points of damage!" << std::endl;
+			  << 5 << " points of damage!" << std::endl;
 	std::cout << "FR4G-TP " << this->Name << ": \"I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!\"" << std::endl;
+}
+
+FragTrap &FragTrap::operator=(FragTrap const &right)
+{
+	this->HitPoints = right.HitPoints;
+	this->maxHitPoints = right.maxHitPoints;
+	this->EnergyPoints = right.EnergyPoints;
+	this->maxEnergyPoints = right.maxEnergyPoints;
+	this->level = right.level;
+	this->Name = right.Name;
+	this->meleeAttackDamage = right.meleeAttackDamage;
+	this->rangedAttackDamage = right.rangedAttackDamage;
+	this->armorDamageReduction = right.armorDamageReduction;
+	std::cout << "overload operator = FragTrap" << std::endl;
+	return *this;
 }

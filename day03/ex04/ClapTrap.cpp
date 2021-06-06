@@ -4,27 +4,36 @@ ClapTrap::ClapTrap() : HitPoints(0), maxHitPoints(0), EnergyPoints(0),
 maxEnergyPoints(0), level(0), Name(""), meleeAttackDamage(0), rangedAttackDamage(0),
 armorDamageReduction(0) {
 	std::cout << "\"ClapTrap not the BEST±, but still good\"" << std::endl;
-
 };
 
-ClapTrap::ClapTrap(const std::string &name) : Name(name), HitPoints(20),
-maxHitPoints(50), EnergyPoints(20), maxEnergyPoints(50),
-level(0), meleeAttackDamage(3), rangedAttackDamage(3), armorDamageReduction(0) {};
+ClapTrap::ClapTrap(std::string const &name) : HitPoints(100),
+maxHitPoints(100), EnergyPoints(50), maxEnergyPoints(50), level(1),
+Name(name), meleeAttackDamage(20), rangedAttackDamage(15),
+armorDamageReduction(3) { std::cout << "Name constructor" << std::endl;}
 
 ClapTrap::ClapTrap(unsigned int hitPoints,
-unsigned int maxHitPoints,
-unsigned int energyPoints,
-unsigned int maxEnergyPoints,
-unsigned int level,
-const std::string &name,
-unsigned int meleeAttackDamage,
-unsigned int rangedAttackDamage,
-unsigned int armorDamageReduction) : HitPoints(hitPoints),
+				   unsigned int maxHitPoints,
+				   unsigned int energyPoints,
+				   unsigned int maxEnergyPoints,
+				   unsigned int level,
+				   const std::string &name,
+				   unsigned int meleeAttackDamage,
+				   unsigned int rangedAttackDamage,
+				   unsigned int armorDamageReduction) : HitPoints(hitPoints),
 maxHitPoints(maxHitPoints), EnergyPoints(energyPoints),
 maxEnergyPoints(maxEnergyPoints), level(level), Name(name),
 meleeAttackDamage(meleeAttackDamage), rangedAttackDamage(rangedAttackDamage),
 armorDamageReduction(armorDamageReduction) {
 	std::cout << "\"ClapTrap the BEST±\"" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& trap) :
+		HitPoints(trap.HitPoints),
+		maxHitPoints(trap.maxHitPoints), EnergyPoints(trap.EnergyPoints),
+		maxEnergyPoints(trap.maxEnergyPoints), level(trap.level), Name(trap.Name),
+		meleeAttackDamage(trap.meleeAttackDamage), rangedAttackDamage
+		(trap.rangedAttackDamage), armorDamageReduction(trap.armorDamageReduction) {
+	std::cout << "Clap trap copy constructor" << std::endl;
 }
 
 
@@ -52,7 +61,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 	else
 	{
 		this->HitPoints = (unsigned int)current;
-		std::cout << _announcePrefix() << this->Name << " take " << amount << " damage" << ", health has become | "
+		std::cout << _announcePrefix() << this->Name << " take " << amount << " damage" << ", health has become |"
 				  << current << "\\" << this->maxHitPoints << std::endl;
 		std::cout << _announcePrefix() << this->Name << ": \"I'm too pretty to die!\"" << std::endl;
 	}
@@ -128,4 +137,19 @@ unsigned int ClapTrap::getRangedAttackDamage() const {
 }
 unsigned int ClapTrap::getArmorDamageReduction() const {
 	return armorDamageReduction;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &right)
+{
+	this->HitPoints = right.HitPoints;
+	this->maxHitPoints = right.maxHitPoints;
+	this->EnergyPoints = right.EnergyPoints;
+	this->maxEnergyPoints = right.maxEnergyPoints;
+	this->level = right.level;
+	this->Name = right.Name;
+	this->meleeAttackDamage = right.meleeAttackDamage;
+	this->rangedAttackDamage = right.rangedAttackDamage;
+	this->armorDamageReduction = right.armorDamageReduction;
+	std::cout << "overload operator = ClapTrap" << std::endl;
+	return *this;
 }
