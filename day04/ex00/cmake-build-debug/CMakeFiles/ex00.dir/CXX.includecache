@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day04/ex00/Sorcerer.cpp
+Sorcerer.hpp
+/Users/egums/CPP_modules/day04/ex00/Sorcerer.hpp
+
+/Users/egums/CPP_modules/day04/ex00/Sorcerer.hpp
+Victim.hpp
+/Users/egums/CPP_modules/day04/ex00/Victim.hpp
+
+/Users/egums/CPP_modules/day04/ex00/Victim.hpp
+iostream
+-
+
