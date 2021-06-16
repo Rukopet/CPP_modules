@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/egums/CPP_modules/day04/ex00/Sorcerer.cpp
-Sorcerer.hpp
-/Users/egums/CPP_modules/day04/ex00/Sorcerer.hpp
+/Users/egums/CPP_modules/day04/ex00/Borrower.hpp
+Victim.hpp
+/Users/egums/CPP_modules/day04/ex00/Victim.hpp
+
+/Users/egums/CPP_modules/day04/ex00/Peon.hpp
+ostream
+-
+Victim.hpp
+/Users/egums/CPP_modules/day04/ex00/Victim.hpp
 
 /Users/egums/CPP_modules/day04/ex00/Sorcerer.hpp
 Victim.hpp
@@ -17,4 +23,14 @@ Victim.hpp
 /Users/egums/CPP_modules/day04/ex00/Victim.hpp
 iostream
 -
+
+/Users/egums/CPP_modules/day04/ex00/main.cpp
+iostream
+-
+Peon.hpp
+/Users/egums/CPP_modules/day04/ex00/Peon.hpp
+Sorcerer.hpp
+/Users/egums/CPP_modules/day04/ex00/Sorcerer.hpp
+Borrower.hpp
+/Users/egums/CPP_modules/day04/ex00/Borrower.hpp
 

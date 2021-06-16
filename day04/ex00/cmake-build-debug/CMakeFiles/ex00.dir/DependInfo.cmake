@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/egums/CPP_modules/day04/ex00/Borrower.cpp" "/Users/egums/CPP_modules/day04/ex00/cmake-build-debug/CMakeFiles/ex00.dir/Borrower.cpp.o"
   "/Users/egums/CPP_modules/day04/ex00/Peon.cpp" "/Users/egums/CPP_modules/day04/ex00/cmake-build-debug/CMakeFiles/ex00.dir/Peon.cpp.o"
   "/Users/egums/CPP_modules/day04/ex00/Sorcerer.cpp" "/Users/egums/CPP_modules/day04/ex00/cmake-build-debug/CMakeFiles/ex00.dir/Sorcerer.cpp.o"
   "/Users/egums/CPP_modules/day04/ex00/Victim.cpp" "/Users/egums/CPP_modules/day04/ex00/cmake-build-debug/CMakeFiles/ex00.dir/Victim.cpp.o"

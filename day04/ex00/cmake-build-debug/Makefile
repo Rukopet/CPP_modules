@@ -142,6 +142,33 @@ ex00/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/build
 .PHONY : ex00/fast
 
+Borrower.o: Borrower.cpp.o
+
+.PHONY : Borrower.o
+
+# target to build an object file
+Borrower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Borrower.cpp.o
+.PHONY : Borrower.cpp.o
+
+Borrower.i: Borrower.cpp.i
+
+.PHONY : Borrower.i
+
+# target to preprocess a source file
+Borrower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Borrower.cpp.i
+.PHONY : Borrower.cpp.i
+
+Borrower.s: Borrower.cpp.s
+
+.PHONY : Borrower.s
+
+# target to generate assembly for a file
+Borrower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Borrower.cpp.s
+.PHONY : Borrower.cpp.s
+
 Peon.o: Peon.cpp.o
 
 .PHONY : Peon.o
@@ -259,6 +286,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex00"
+	@echo "... Borrower.o"
+	@echo "... Borrower.i"
+	@echo "... Borrower.s"
 	@echo "... Peon.o"
 	@echo "... Peon.i"
 	@echo "... Peon.s"

@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/egums/CPP_modules/day04/ex00/Borrower.cpp">
+			<Option target="ex00"/>
+		</Unit>
+		<Unit filename="/Users/egums/CPP_modules/day04/ex00/Borrower.hpp">
+			<Option target="ex00"/>
+		</Unit>
 		<Unit filename="/Users/egums/CPP_modules/day04/ex00/Peon.cpp">
 			<Option target="ex00"/>
 		</Unit>

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day04/ex02/AssaultTerminator.hpp
+ISpaceMarine.hpp
+/Users/egums/CPP_modules/day04/ex02/ISpaceMarine.hpp
+
+/Users/egums/CPP_modules/day04/ex02/ISpaceMarine.hpp
+iostream
+-
+
+/Users/egums/CPP_modules/day04/ex02/ISquad.hpp
+ISpaceMarine.hpp
+/Users/egums/CPP_modules/day04/ex02/ISpaceMarine.hpp
+
+/Users/egums/CPP_modules/day04/ex02/Squad.hpp
+ISquad.hpp
+/Users/egums/CPP_modules/day04/ex02/ISquad.hpp
+
+/Users/egums/CPP_modules/day04/ex02/TacticalMarine.hpp
+ISpaceMarine.hpp
+/Users/egums/CPP_modules/day04/ex02/ISpaceMarine.hpp
+
+/Users/egums/CPP_modules/day04/ex02/main.cpp
+iostream
+-
+Squad.hpp
+/Users/egums/CPP_modules/day04/ex02/Squad.hpp
+TacticalMarine.hpp
+/Users/egums/CPP_modules/day04/ex02/TacticalMarine.hpp
+AssaultTerminator.hpp
+/Users/egums/CPP_modules/day04/ex02/AssaultTerminator.hpp
+
