@@ -14,3 +14,5 @@ PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle &op) {
 	AWeapon::operator=(op);
 	return *this;
 }
+
+PlasmaRifle::~PlasmaRifle() { std::cout << "plasme rifle destructor" << std::endl; }

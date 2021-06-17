@@ -12,7 +12,9 @@ _type(enemy.getType()), _hp(enemy.getHp()) {}
 
 
 void Enemy::takeDamage(int damage) {
-	this->_hp -= damage - 0;
+	if (this->_hp - damage < 0)
+		this->_hp = 0;
+	this->_hp -= damage;
 }
 
 Enemy &Enemy::operator=(Enemy const &weapon)

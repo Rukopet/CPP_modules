@@ -2,13 +2,13 @@
 
 SuperTrap::SuperTrap(const std::string &name) : ClapTrap(name), FragTrap(name),
 NinjaTrap(name) {
-	this->HitPoints = this->FragTrap::HitPoints;
-	this->maxHitPoints = this->FragTrap::maxHitPoints;
-	this->EnergyPoints = this->NinjaTrap::EnergyPoints;
-	this->maxEnergyPoints = this->NinjaTrap::maxEnergyPoints;
-	this->meleeAttackDamage = this->NinjaTrap::meleeAttackDamage;
-	this->rangedAttackDamage = this->FragTrap::rangedAttackDamage;
-	this->armorDamageReduction = this->FragTrap::armorDamageReduction;
+	this->HitPoints = FragTrap::stat_HitPoints;
+	this->maxHitPoints = FragTrap::stat_MaxHitPoints;
+	this->EnergyPoints = NinjaTrap::stat_EnergyPoints;
+	this->maxEnergyPoints = NinjaTrap::stat_MaxEnergyPoints;
+	this->meleeAttackDamage = NinjaTrap::stat_MeleeAttackDamage;
+	this->rangedAttackDamage = FragTrap::stat_RangedAttackDamage;
+	this->armorDamageReduction = FragTrap::stat_ArmorDamageReduction;
 	std::cout << "\"ClapTrap the BEST in SUUUUUPER TRAAP ±\"" << std::endl;
 }
 

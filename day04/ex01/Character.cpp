@@ -7,6 +7,7 @@ Character::Character(const Character &weapon) :
 _name(weapon.getName()), _ap(weapon.getAp()), _weapon(0) {}
 Character::Character() :
 _name(), _ap(40), _weapon(0) {}
+Character::~Character() {std::cout << "character destrucor" << std::endl;}
 
 Character & Character::operator=(const Character& op)
 {

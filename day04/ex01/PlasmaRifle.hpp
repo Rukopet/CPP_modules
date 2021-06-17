@@ -10,6 +10,7 @@ public:
 
 	virtual void attack() const;
 	PlasmaRifle &operator=(const PlasmaRifle& op);
+	virtual ~PlasmaRifle();
 };
 
 

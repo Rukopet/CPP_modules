@@ -114,7 +114,7 @@ void FragTrap::panicAttack(const std::string &target) {
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &right)
-{
+{x
 	this->HitPoints = right.HitPoints;
 	this->maxHitPoints = right.maxHitPoints;
 	this->EnergyPoints = right.EnergyPoints;

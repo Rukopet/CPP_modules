@@ -15,7 +15,8 @@ SuperMutant &SuperMutant::operator=(SuperMutant const &weapon)
 }
 
 void SuperMutant::takeDamage(int damage) {
-	if (damage - 3)
+	if (damage - 3 <= 0)
 		return;
-	this->setHp(this->getHp() - damage - 3);
+	damage -= 3;
+	Enemy::takeDamage(damage);
 }

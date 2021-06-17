@@ -28,6 +28,8 @@ public:
 	Character &operator=(const Character& op);
 	AWeapon *getWeapon() const;
 
+	virtual ~Character();
+
 };
 
 
