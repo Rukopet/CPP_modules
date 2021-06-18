@@ -5,8 +5,12 @@
 
 class Ice : public AMateria {
 public:
+	Ice(const Ice &pIce);
+	Ice();
 	AMateria *clone() const;
 	void use(ICharacter &target);
+
+	Ice &operator=(const Ice& op);
 };
 
 

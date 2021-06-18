@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day04/ex03/AMateria.hpp
+iostream
+-
+ICharacter.hpp
+/Users/egums/CPP_modules/day04/ex03/ICharacter.hpp
+
+/Users/egums/CPP_modules/day04/ex03/Character.cpp
+Character.hpp
+/Users/egums/CPP_modules/day04/ex03/Character.hpp
+AMateria.hpp
+/Users/egums/CPP_modules/day04/ex03/AMateria.hpp
+
+/Users/egums/CPP_modules/day04/ex03/Character.hpp
+ICharacter.hpp
+/Users/egums/CPP_modules/day04/ex03/ICharacter.hpp
+iostream
+-
+
+/Users/egums/CPP_modules/day04/ex03/ICharacter.hpp
+iostream
+-
+

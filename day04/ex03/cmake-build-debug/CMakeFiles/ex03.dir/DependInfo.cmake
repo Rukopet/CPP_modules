@@ -5,7 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/egums/CPP_modules/day04/ex03/AMateria.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/AMateria.cpp.o"
+  "/Users/egums/CPP_modules/day04/ex03/Character.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/Character.cpp.o"
+  "/Users/egums/CPP_modules/day04/ex03/Cure.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/Cure.cpp.o"
   "/Users/egums/CPP_modules/day04/ex03/Ice.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/Ice.cpp.o"
+  "/Users/egums/CPP_modules/day04/ex03/MateriaSource.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/MateriaSource.cpp.o"
   "/Users/egums/CPP_modules/day04/ex03/main.cpp" "/Users/egums/CPP_modules/day04/ex03/cmake-build-debug/CMakeFiles/ex03.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -65,14 +65,6 @@ Squad::~Squad() {
 		delete _begin_list;
 		_begin_list = next;
 	}
-
-//	for(int i = 0; i < this->getCount(); i++)
-//	{
-//		next = this->_begin_list->next;
-//		delete this->_begin_list->data;
-//		delete this->_begin_list;
-//		this->_begin_list = next;
-//	}
 }
 
 ISpaceMarine *Squad::getUnit(int i) const {
