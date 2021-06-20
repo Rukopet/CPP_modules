@@ -20,6 +20,10 @@ Character::~Character() {
 	}
 }
 
+Character::Character(const Character &name) {
+	Character::operator=(name);
+}
+
 const std::string &Character::getName() const {
 	return _name;
 }
@@ -52,6 +56,9 @@ void Character::unequip(int idx) {
 }
 
 Character &Character::operator=(const Character &op) {
+	for (int i = 0; i < 4; ++i) {if (this->_inventory[i] != 0) delete
+	this->_inventory[i]; this->_inventory[i] = 0;};
 	for (int i = 0; i < 4; ++i) {this->_inventory[i] = op._inventory[i];};
+	this->_name = op._name;
 	return *this;
 }

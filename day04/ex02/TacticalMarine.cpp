@@ -10,6 +10,7 @@ TacticalMarine::TacticalMarine() {
 
 TacticalMarine & TacticalMarine::operator=(const TacticalMarine& op)
 {
+	(void)op;
 	return *this;
 }
 

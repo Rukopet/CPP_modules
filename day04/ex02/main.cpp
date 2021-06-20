@@ -16,10 +16,14 @@ int main() {
 	ISpaceMarine *yarik = new AssaultTerminator;
 	ISpaceMarine *serega = new AssaultTerminator;
 	ISpaceMarine *diman = new AssaultTerminator;
+	diman->battleCry();
+	diman->meleeAttack();
+	joe->rangedAttack();
 	kek->push(yarik);
 	kek->push(serega);
 	kek->push(diman);
 	delete kek;
+
 
 	Squad *wow = new Squad;
 	ISpaceMarine *pec = new AssaultTerminator;

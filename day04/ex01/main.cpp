@@ -35,6 +35,5 @@ int main()
 			me->recoverAP();
 		std::cout << *me;
 	}
-	std::cout << "-------------------------" << std::endl;
 	return 0;
 }

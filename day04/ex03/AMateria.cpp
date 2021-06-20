@@ -1,11 +1,7 @@
 #include "AMateria.hpp"
 
 AMateria::AMateria(std::string const &type) : _type(type), _xp(0) {}
-
-AMateria::AMateria(const AMateria &copy) {
-	this->_type = copy._type;
-	this->_xp = copy._xp;
-}
+AMateria::AMateria(const AMateria &copy) : _type(copy._type), _xp(copy._xp) {}
 AMateria::~AMateria() {}
 
 
@@ -19,6 +15,7 @@ unsigned int AMateria::getXp() const {
 
 void AMateria::use(ICharacter &target) {
 	this->_xp += 10;
+	(void)target;
 }
 
 AMateria & AMateria::operator=(const AMateria& op)

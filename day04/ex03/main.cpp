@@ -23,5 +23,6 @@ int main() {
 	delete bob;
 	delete me;
 	delete src;
+	while (1);
 	return 0;
 }

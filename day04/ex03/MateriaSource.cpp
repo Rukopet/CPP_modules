@@ -42,6 +42,8 @@ MateriaSource::MateriaSource(const MateriaSource &ms) {
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &op) {
+	for (int i = 0; i < 4; ++i) {if (this->mat[i] != 0) delete this->mat[i];
+	this->mat[i] = 0;};
 	for (int i = 0; i < 4; ++i) {this->mat[i] = op.mat[i];};
 	return *this;
 }

@@ -1,6 +1,6 @@
 #include "Squad.hpp"
 
-Squad::Squad() : _count(0), _begin_list(0) {}
+Squad::Squad() : _begin_list(0), _count(0) {}
 
 Squad::Squad(const Squad & copy)
 {

@@ -2,11 +2,10 @@
 
 
 Character::Character(const std::string &name) :
-_name(name), _ap(40), _weapon(0) {}
+		_ap(40), _name(name), _weapon(0) {}
 Character::Character(const Character &weapon) :
-_name(weapon.getName()), _ap(weapon.getAp()), _weapon(0) {}
-Character::Character() :
-_name(), _ap(40), _weapon(0) {}
+ _ap(weapon.getAp()), _name(weapon.getName()), _weapon(0) {}
+Character::Character() : _ap(40), _name(), _weapon(0) {}
 Character::~Character() {std::cout << "character destrucor" << std::endl;}
 
 Character & Character::operator=(const Character& op)
@@ -35,7 +34,7 @@ void Character::equip(AWeapon *weapon) {
 void Character::attack(Enemy *enemy) {
 	if (this->_weapon == 0)
 		return;
-	if (this->_ap >= this->_weapon->getApcost())
+	if ((int)this->_ap >= this->_weapon->getApcost())
 	{
 		std::cout << this->_name << " attacks " << enemy->getType() << " with a " << this->_weapon->getName() << std::endl;
 		this->_weapon->attack();

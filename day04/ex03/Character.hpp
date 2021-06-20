@@ -7,6 +7,7 @@
 class Character : public ICharacter {
 public:
 	Character(const std::string &name);
+	Character(const Character &name);
 	void equip(AMateria *item);
 	void unequip(int idx);
 
