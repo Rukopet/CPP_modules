@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day05/ex03/Bureaucrat.hpp
+iostream
+-
+Form.hpp
+/Users/egums/CPP_modules/day05/ex03/Form.hpp
+
+/Users/egums/CPP_modules/day05/ex03/Form.hpp
+Bureaucrat.hpp
+/Users/egums/CPP_modules/day05/ex03/Bureaucrat.hpp
+
+/Users/egums/CPP_modules/day05/ex03/Intern.hpp
+iostream
+-
+Form.hpp
+/Users/egums/CPP_modules/day05/ex03/Form.hpp
+
+/Users/egums/CPP_modules/day05/ex03/ShrubberyCreationForm.cpp
+ShrubberyCreationForm.hpp
+/Users/egums/CPP_modules/day05/ex03/ShrubberyCreationForm.hpp
+
+/Users/egums/CPP_modules/day05/ex03/ShrubberyCreationForm.hpp
+Form.hpp
+/Users/egums/CPP_modules/day05/ex03/Form.hpp
+Bureaucrat.hpp
+/Users/egums/CPP_modules/day05/ex03/Bureaucrat.hpp
+fstream
+-
+
+/Users/egums/CPP_modules/day05/ex03/main.cpp
+iostream
+-
+Bureaucrat.hpp
+/Users/egums/CPP_modules/day05/ex03/Bureaucrat.hpp
+Form.hpp
+/Users/egums/CPP_modules/day05/ex03/Form.hpp
+Intern.hpp
+/Users/egums/CPP_modules/day05/ex03/Intern.hpp
+

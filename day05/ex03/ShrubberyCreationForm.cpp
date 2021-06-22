@@ -31,5 +31,6 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 			"         |||\\/\n"
 			"         |||||\n"
 			"   .....//||||\\....";
+	std::cout << "Shrubbery form executed!" << std::endl;
 }
 
