@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day05/ex01/Bureaucrat.hpp
+iostream
+-
+Form.hpp
+/Users/egums/CPP_modules/day05/ex01/Form.hpp
+
+/Users/egums/CPP_modules/day05/ex01/Form.cpp
+Form.hpp
+/Users/egums/CPP_modules/day05/ex01/Form.hpp
+
+/Users/egums/CPP_modules/day05/ex01/Form.hpp
+Bureaucrat.hpp
+/Users/egums/CPP_modules/day05/ex01/Bureaucrat.hpp
+

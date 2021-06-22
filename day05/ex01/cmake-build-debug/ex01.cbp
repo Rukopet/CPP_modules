@@ -86,6 +86,12 @@
 		<Unit filename="/Users/egums/CPP_modules/day05/ex01/Bureaucrat.hpp">
 			<Option target="ex01"/>
 		</Unit>
+		<Unit filename="/Users/egums/CPP_modules/day05/ex01/Form.cpp">
+			<Option target="ex01"/>
+		</Unit>
+		<Unit filename="/Users/egums/CPP_modules/day05/ex01/Form.hpp">
+			<Option target="ex01"/>
+		</Unit>
 		<Unit filename="/Users/egums/CPP_modules/day05/ex01/main.cpp">
 			<Option target="ex01"/>
 		</Unit>

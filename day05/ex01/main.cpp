@@ -1,26 +1,17 @@
 #include <iostream>
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main() {
-	try {
-		Bureaucrat kek("Vasya", 1);
-		std::cout << kek << std::endl;
-		Bureaucrat omega(kek);
-		std::cout << omega << std::endl;
-//		Bureaucrat kekw("vova", -1);
-//		std::cout << kekw << std::endl;
-		Bureaucrat waiter("1", 2);
-		std::cout << waiter << std::endl;
-		Bureaucrat bureaucrat("wow", 1);
-		waiter = bureaucrat;
-		std::cout << waiter << std::endl;
-		Bureaucrat lol("Tamara", 151);
-		std::cout << lol << std::endl;
-	}
-	catch (std::exception &ex)
-	{
-		std::cout << ex.what() << std::endl;
-	}
+	Form spravka(70, 70, "some paper");
+	std::cout << spravka << std::endl;
+	Bureaucrat someChel("tipa kto-to", 60);
+	spravka.beSigned(someChel);
+	Form some_paper(50, 50, "ndfl");
+	Form new_paper(60, 50, "covid");
+	someChel.signForm(some_paper);
+	someChel.signForm(new_paper);
+	std::cout << new_paper << std::endl;
 	return 0;
 }
