@@ -45,7 +45,7 @@ Form &Form::operator=(const Form &op) {
 	return *this;
 }
 
-void Form::execute(const Bureaucrat &executor) const {}
+void Form::execute(const Bureaucrat &executor) const {(void)executor;}
 
 
 bool Form::isSigned() const {return _signed;}

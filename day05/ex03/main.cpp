@@ -20,6 +20,5 @@ int main() {
 	delete rrf;
 	delete pres_try;
 	delete Shru;
-w
 	return 0;
 }
