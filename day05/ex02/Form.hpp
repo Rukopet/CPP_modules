@@ -1,0 +1,41 @@
+#ifndef EX02_FORM_HPP
+#define EX02_FORM_HPP
+
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
+
+class Form {
+private:
+	bool _signed;
+	int _needed_grade_to_sign;
+	int _needed_grade_to_execute;
+	std::string _name_form;
+
+public:
+	Form(int neededGradeToSign, int neededGradeToExecute,
+		 const std::string &nameForm);
+	Form(Form &copy);
+	virtual ~Form();
+
+	bool isSigned() const;
+	int getNeededGradeToSign() const;
+	int getNeededGradeToExecute() const;
+	const std::string &getNameForm() const;
+	void beSigned(Bureaucrat &bureaucrat);
+	Form &operator=(const Form& op);
+	virtual void execute(Bureaucrat const & executor) const;
+
+	struct GradeTooHighException : public std::exception {
+		GradeTooHighException() throw() {};
+		virtual const char *what() const throw() { return "Grade is too high!";};
+	};
+	struct GradeTooLowException : public std::exception {
+		GradeTooLowException() throw() {};
+		virtual const char* what() const throw() {return "Grade is too low!";}
+	};
+};
+
+std::ostream &operator<<(std::ostream &os, const Form &form);
+
+#endif //EX02_FORM_HPP
