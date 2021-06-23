@@ -142,32 +142,32 @@ ex00/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/build
 .PHONY : ex00/fast
 
-convert.o: convert.cpp.o
+Convert.o: Convert.cpp.o
 
-.PHONY : convert.o
+.PHONY : Convert.o
 
 # target to build an object file
-convert.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/convert.cpp.o
-.PHONY : convert.cpp.o
+Convert.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Convert.cpp.o
+.PHONY : Convert.cpp.o
 
-convert.i: convert.cpp.i
+Convert.i: Convert.cpp.i
 
-.PHONY : convert.i
+.PHONY : Convert.i
 
 # target to preprocess a source file
-convert.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/convert.cpp.i
-.PHONY : convert.cpp.i
+Convert.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Convert.cpp.i
+.PHONY : Convert.cpp.i
 
-convert.s: convert.cpp.s
+Convert.s: Convert.cpp.s
 
-.PHONY : convert.s
+.PHONY : Convert.s
 
 # target to generate assembly for a file
-convert.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/convert.cpp.s
-.PHONY : convert.cpp.s
+Convert.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex00.dir/build.make CMakeFiles/ex00.dir/Convert.cpp.s
+.PHONY : Convert.cpp.s
 
 main.o: main.cpp.o
 
@@ -205,9 +205,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex00"
-	@echo "... convert.o"
-	@echo "... convert.i"
-	@echo "... convert.s"
+	@echo "... Convert.o"
+	@echo "... Convert.i"
+	@echo "... Convert.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

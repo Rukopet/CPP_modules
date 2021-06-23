@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/egums/CPP_modules/day06/ex00/convert.cpp">
+		<Unit filename="/Users/egums/CPP_modules/day06/ex00/Convert.cpp">
 			<Option target="ex00"/>
 		</Unit>
-		<Unit filename="/Users/egums/CPP_modules/day06/ex00/convert.hpp">
+		<Unit filename="/Users/egums/CPP_modules/day06/ex00/Convert.hpp">
 			<Option target="ex00"/>
 		</Unit>
 		<Unit filename="/Users/egums/CPP_modules/day06/ex00/main.cpp">

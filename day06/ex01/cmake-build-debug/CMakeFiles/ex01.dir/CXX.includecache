@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day06/ex01/SeDesi_rialization.cpp
+SeDesi_rialization.hpp
+/Users/egums/CPP_modules/day06/ex01/SeDesi_rialization.hpp
+
+/Users/egums/CPP_modules/day06/ex01/SeDesi_rialization.hpp
+iostream
+-
+

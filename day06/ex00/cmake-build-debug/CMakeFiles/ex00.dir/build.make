@@ -89,29 +89,29 @@ CMakeFiles/ex00.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex00.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/egums/CPP_modules/day06/ex00/main.cpp -o CMakeFiles/ex00.dir/main.cpp.s
 
-CMakeFiles/ex00.dir/convert.cpp.o: CMakeFiles/ex00.dir/flags.make
-CMakeFiles/ex00.dir/convert.cpp.o: ../convert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egums/CPP_modules/day06/ex00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex00.dir/convert.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex00.dir/convert.cpp.o -c /Users/egums/CPP_modules/day06/ex00/convert.cpp
+CMakeFiles/ex00.dir/Convert.cpp.o: CMakeFiles/ex00.dir/flags.make
+CMakeFiles/ex00.dir/Convert.cpp.o: ../Convert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egums/CPP_modules/day06/ex00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex00.dir/Convert.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex00.dir/Convert.cpp.o -c /Users/egums/CPP_modules/day06/ex00/Convert.cpp
 
-CMakeFiles/ex00.dir/convert.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex00.dir/convert.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/egums/CPP_modules/day06/ex00/convert.cpp > CMakeFiles/ex00.dir/convert.cpp.i
+CMakeFiles/ex00.dir/Convert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex00.dir/Convert.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/egums/CPP_modules/day06/ex00/Convert.cpp > CMakeFiles/ex00.dir/Convert.cpp.i
 
-CMakeFiles/ex00.dir/convert.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex00.dir/convert.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/egums/CPP_modules/day06/ex00/convert.cpp -o CMakeFiles/ex00.dir/convert.cpp.s
+CMakeFiles/ex00.dir/Convert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex00.dir/Convert.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/egums/CPP_modules/day06/ex00/Convert.cpp -o CMakeFiles/ex00.dir/Convert.cpp.s
 
 # Object files for target ex00
 ex00_OBJECTS = \
 "CMakeFiles/ex00.dir/main.cpp.o" \
-"CMakeFiles/ex00.dir/convert.cpp.o"
+"CMakeFiles/ex00.dir/Convert.cpp.o"
 
 # External object files for target ex00
 ex00_EXTERNAL_OBJECTS =
 
 ex00: CMakeFiles/ex00.dir/main.cpp.o
-ex00: CMakeFiles/ex00.dir/convert.cpp.o
+ex00: CMakeFiles/ex00.dir/Convert.cpp.o
 ex00: CMakeFiles/ex00.dir/build.make
 ex00: CMakeFiles/ex00.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/egums/CPP_modules/day06/ex00/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ex00"

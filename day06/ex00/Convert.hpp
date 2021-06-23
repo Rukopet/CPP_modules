@@ -17,13 +17,27 @@ public:
 	void toDouble();
 	void toFloat();
 
+	float getDigit() const;
+	void setDigit(float digit);
+
+
+	struct NonConvertible : public std::exception {
+		NonConvertible() throw() {};
+		virtual const char* what() const throw() {return "Non convertible";}
+	};
+
 private:
 	std::string _string_to_convert;
+	float		_digit;
 
 
 	struct Impossible : public std::exception {
 		Impossible() throw() {};
-		virtual const char* what() const throw() {return "Grade is too low!";}
+		virtual const char* what() const throw() {return "impossible";}
+	};
+	struct NonPrintable : public std::exception {
+		NonPrintable() throw() {};
+		virtual const char* what() const throw() {return "Non displayable";}
 	};
 };
 
