@@ -6,9 +6,8 @@
 struct Data {
 	std::string *some_string_pointer;
 	int 		some_int;
-	std::string some_string;
-
-	~Data() {delete some_string_pointer; std::cout << "some destr" << std::endl;};
+	std::string *some_string;
+	~Data() {delete some_string_pointer; delete some_string; std::cout << "some destr" << std::endl;};
 };
 
 struct SeDesi_rialization {

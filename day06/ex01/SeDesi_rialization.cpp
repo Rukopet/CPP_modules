@@ -7,25 +7,24 @@ void *SeDesi_rialization::serialize(void) {
 
 	std::srand(time(0));
 
-//	ret->some_int = std::rand() % 1000;
-	ret->some_int = 123;
-	for (int i = 0; i != 23; ++i)
-		ret->some_string += SeDesi_rialization::some_literas[std::rand() % 24];
-	ret->some_string_pointer = new std::string;
-	for (int i = 0; i != 50; ++i)
-		*(ret->some_string_pointer) += SeDesi_rialization::some_literas[std::rand() % 24];
-	std::cout << *(ret->some_string_pointer) << std::endl;
-	std::string ex = *(ret->some_string_pointer + 1);
-	std::cout << "--" << ex << std::endl;
-	std::cout << 123 << ret->some_string << std::endl;
+	ret->some_int = std::rand() % 1000;
+	std::string tmp;
+	for (int i = 0; i != 5; ++i)
+		tmp += SeDesi_rialization::some_literas[std::rand() % 24];
+	ret->some_string = new std::string(tmp);
+	tmp = "";
+	for (int i = 0; i != 6; ++i)
+		tmp += SeDesi_rialization::some_literas[std::rand() % 24];
+	ret->some_string_pointer = new std::string(tmp);
+	std::cout << "IN SERIALIZATION: " << ret->some_int << std::endl;
+	std::cout << "IN SERIALIZATION: " <<  *(ret->some_string) << std::endl;
+	std::cout << "IN SERIALIZATION: " << tmp << std::endl;
 	return reinterpret_cast<void *>(ret);
 }
 
 Data *SeDesi_rialization::deserialize(void *raw) {
-	Data *ret = new Data;
-	ret->some_string_pointer = (reinterpret_cast<std::string *>(raw));
-	ret->some_int = *(reinterpret_cast<int *>(raw) + 2);
-	std::cout << "***" << *(ret->some_string_pointer) << std::endl;
-//	ret->some_string = std::string(*(reinterpret_cast<std::string *>(raw) + 32));
-	return ret;
+	return reinterpret_cast <Data *>(raw);
 }
+
+
+//https://stackoverflow.com/questions/119123/why-isnt-sizeof-for-a-struct-equal-to-the-sum-of-sizeof-of-each-member
