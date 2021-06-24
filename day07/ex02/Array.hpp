@@ -9,7 +9,7 @@ private:
 	T *_array;
 	unsigned int _length;
 public:
-	Array() : _array(new T), _length(0) {};
+	Array() : _array(), _length(0) {};
 	Array(unsigned int length) : _array(new T[length]), _length(length) {};
 
 	Array(Array &cp) {
