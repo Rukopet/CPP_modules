@@ -1,0 +1,18 @@
+CC = clang++
+SRC = main.cpp
+INC = whatever.hpp
+FLAGS = -Wall -Wextra -Werror -std=c++98
+NAME = Base
+
+all: $(NAME)
+
+$(NAME): $(SRC) $(INC)
+	$(CC) $(FLAGS) $(SRC) -o $(NAME)
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day07/ex00/main.cpp
+whatever.hpp
+/Users/egums/CPP_modules/day07/ex00/whatever.hpp
+
+/Users/egums/CPP_modules/day07/ex00/whatever.hpp
+iostream
+-
+
