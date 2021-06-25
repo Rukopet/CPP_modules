@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/egums/CPP_modules/day08/ex01/Span.hpp
+vector
+-
+list
+-
+utility
+-
+cmath
+-
+iostream
+-
+limits
+-
+
+/Users/egums/CPP_modules/day08/ex01/main.cpp
+Span.hpp
+/Users/egums/CPP_modules/day08/ex01/Span.hpp
+

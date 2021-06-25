@@ -15,7 +15,7 @@ public:
 	Array(Array &cp) {
 		this->_length = cp.size();
 		this->_array = new T[cp.size()];
-		for (int i = 0; i < cp.size(); ++i) {
+		for (unsigned int i = 0; i < cp.size(); ++i) {
 			this->_array[i] = cp._array[i];
 		}
 	}
@@ -41,7 +41,7 @@ struct ArrayException : public std::exception {
 			delete[] this->_array;
 		this->_array = new T[op.size()];
 		this->_length = op.size();
-		for (int i = 0; i < this->size(); i++)
+		for (unsigned int i = 0; i < this->size(); i++)
 			this->_array[i] = op._array[i];
 		return *this;
 	};
