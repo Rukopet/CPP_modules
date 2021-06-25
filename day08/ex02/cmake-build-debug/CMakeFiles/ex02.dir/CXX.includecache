@@ -6,12 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/Users/egums/CPP_modules/day08/ex02/MutantStack.cpp
+MutantStack.hpp
+/Users/egums/CPP_modules/day08/ex02/MutantStack.hpp
+
 /Users/egums/CPP_modules/day08/ex02/MutantStack.hpp
 iostream
 -
 stack
 -
 deque
+-
+iterator
+-
+vector
 -
 
 /Users/egums/CPP_modules/day08/ex02/main.cpp

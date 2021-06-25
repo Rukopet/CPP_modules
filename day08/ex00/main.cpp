@@ -7,7 +7,6 @@ int		main(void)
 {
 	std::vector<int> vec;
 	std::srand(time(0) + 198712);
-	int rand_num = 0;
 	int check = 0;
 	for (int i = 0; i != 5; ++i) {
 		try {
